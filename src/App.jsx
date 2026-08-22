@@ -28,7 +28,7 @@ const App = () => {
     const [useStandard, setUseStandard] = useState(true);
 
     // UI state
-    const [snapEnabled, setSnapEnabled] = useState(false);
+    const [snapEnabled, setSnapEnabled] = useState(true);
 
     // --- Data Fetching ---
     // Fetch tax brackets and standard deduction data for the selected year
@@ -132,7 +132,7 @@ const App = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gray-900 py-12 px-4 sm:px-6 lg:px-8 flex justify-center font-sans text-gray-100">
+        <div className="min-h-screen bg-gray-900 py-12 px-4 sm:px-6 lg:px-8 flex flex-col items-center font-sans text-gray-100">
             <div className="max-w-4xl w-full grid grid-cols-1 lg:grid-cols-2 gap-8">
 
                 {/* --- Left Column: Inputs --- */}
@@ -277,7 +277,7 @@ const App = () => {
                                 onChange={(val) => handleCapGainChange(index, val)}
                                 min={0}
                                 max={500000}
-                                step={500}
+                                step={100}
                             />
                         ))}
 
@@ -443,7 +443,7 @@ const App = () => {
             </div>
 
             {/* Sankey Diagram Section */}
-            {/*             <div className="max-w-4xl w-full mt-8">
+            <div className="max-w-4xl w-full mt-8">
                 <SankeyDiagram
                     totalGrossIncome={results.totalGrossIncome}
                     finalDeduction={results.finalDeduction}
@@ -453,7 +453,7 @@ const App = () => {
                     capGainTax={results.capGainTax}
                     netIncome={netIncome}
                 />
-            </div> */}
+            </div> 
         </div>
     );
 };
