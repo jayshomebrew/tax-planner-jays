@@ -5,9 +5,21 @@
 
 
 to get running:
+
+
 sudo apt update
+
+
 sudo apt install nodejs npm
+
+
 node --version
+
+
 npm --version
+
+
 npm install vite
+
+
 npm run dev
