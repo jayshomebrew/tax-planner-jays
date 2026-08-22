@@ -258,7 +258,7 @@ const App = () => {
                             <SliderInput
                                 key={`cap-${index}`}
                                 // Label logic with Remove button for additional entries
-                                label={index === 0 ? "Capital Gains" : (
+                                label={index === 0 ? "Capital Gains (Long-Term Capital Gains)" : (
                                     <span className="flex items-center">
                                         Capital Gains {index + 1}
                                         {/* Remove Button for additional capital gains streams */}
@@ -287,7 +287,7 @@ const App = () => {
                                 onClick={addCapGainIncome}
                                 className="text-xs font-medium text-indigo-400 hover:text-indigo-300 flex items-center transition-colors -mt-4 mb-2"
                             >
-                                <span className="text-lg mr-1">+</span> Add Capital Gains
+                                <span className="text-lg mr-1">+</span> Add Capital Gains (Long-Term Capital Gains)
                             </button>
                         )}
                     </Card>
